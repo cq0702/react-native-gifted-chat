@@ -1,35 +1,76 @@
 {
-  "name": "react-native-gifted-chat",
-  "version": "0.4.3",
-  "description": "The most complete chat UI for React Native",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FaridSafi/react-native-gifted-chat.git"
+  "_args": [
+    [
+      {
+        "raw": "react-native-gifted-chat@git+https://github.com/cq0702/react-native-gifted-chat.git",
+        "scope": null,
+        "escapedName": "react-native-gifted-chat",
+        "name": "react-native-gifted-chat",
+        "rawSpec": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+        "spec": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:cq0702/react-native-gifted-chat.git",
+          "sshUrl": "git+ssh://git@github.com/cq0702/react-native-gifted-chat.git",
+          "httpsUrl": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+          "gitUrl": "git://github.com/cq0702/react-native-gifted-chat.git",
+          "shortcut": "github:cq0702/react-native-gifted-chat",
+          "directUrl": "https://raw.githubusercontent.com/cq0702/react-native-gifted-chat/master/package.json"
+        }
+      },
+      "/Users/apple/code/yuc"
+    ]
+  ],
+  "_from": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+  "_id": "react-native-gifted-chat@0.4.3",
+  "_inCache": true,
+  "_location": "/react-native-gifted-chat",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-gifted-chat@git+https://github.com/cq0702/react-native-gifted-chat.git",
+    "scope": null,
+    "escapedName": "react-native-gifted-chat",
+    "name": "react-native-gifted-chat",
+    "rawSpec": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+    "spec": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:cq0702/react-native-gifted-chat.git",
+      "sshUrl": "git+ssh://git@github.com/cq0702/react-native-gifted-chat.git",
+      "httpsUrl": "git+https://github.com/cq0702/react-native-gifted-chat.git",
+      "gitUrl": "git://github.com/cq0702/react-native-gifted-chat.git",
+      "shortcut": "github:cq0702/react-native-gifted-chat",
+      "directUrl": "https://raw.githubusercontent.com/cq0702/react-native-gifted-chat/master/package.json"
+    }
   },
-  "keywords": ["android", "ios", "react-native", "react", "react-component", "messenger", "message", "chat"],
-  "author": "Farid Safi",
-  "license": "MIT",
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/cq0702/react-native-gifted-chat.git#a7198d596bf22ab36be3dcc08f739ce2dafc50fa",
+  "_shasum": "53a3bf3d14f6ef01a7fb732134ba79a020e1b67c",
+  "_shrinkwrap": null,
+  "_spec": "react-native-gifted-chat@git+https://github.com/cq0702/react-native-gifted-chat.git",
+  "_where": "/Users/apple/code/yuc",
+  "author": {
+    "name": "Farid Safi"
+  },
   "bugs": {
     "url": "https://github.com/FaridSafi/react-native-gifted-chat/issues"
   },
-  "homepage": "https://github.com/FaridSafi/react-native-gifted-chat#readme",
-  "scripts": {
-    "lint": "eslint . --ext .js,.jsx",
-    "precommit": "yarn lint",
-    "test": "jest --no-watchman",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "appr": "cd example-expo && ./setPRVersion.js && yarn && yarn appr",
-    "deploy":
-      "cd example-expo && yarn install && exp login --username $EXP_USERNAME --password $EXP_PASSWORD && exp publish --non-interactive"
+  "dependencies": {
+    "@expo/react-native-action-sheet": "^1.0.1",
+    "md5": "2.2.1",
+    "moment": "^2.19.0",
+    "react-native-communications": "2.2.1",
+    "react-native-invertible-scroll-view": "^1.1.0",
+    "react-native-lightbox": "^0.7.0",
+    "react-native-parsed-text": "^0.0.20",
+    "shallowequal": "1.0.2",
+    "uuid": "3.2.1"
   },
-  "jest": {
-    "preset": "react-native",
-    "setupFiles": ["./tests/setup.js"],
-    "modulePathIgnorePatterns": ["<rootDir>/example", "<rootDir>/example-expo", "<rootDir>/example-slack-message"]
-  },
+  "description": "The most complete chat UI for React Native",
   "devDependencies": {
     "@types/react": "^16.0.38",
     "@types/react-native": "^0.52.12",
@@ -45,25 +86,58 @@
     "eslint-plugin-react-native": "3.2.1",
     "husky": "0.15.0-rc.2",
     "jest": "22.1.4",
-    "react-test-renderer": "16.3.0",
+    "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-native": "0.51.0",
-    "prop-types": "15.6.1"
+    "react-test-renderer": "16.3.0"
   },
-  "dependencies": {
-    "@expo/react-native-action-sheet": "^1.0.1",
-    "md5": "2.2.1",
-    "moment": "^2.19.0",
-    "react-native-communications": "2.2.1",
-    "react-native-invertible-scroll-view": "^1.1.0",
-    "react-native-lightbox": "^0.7.0",
-    "react-native-parsed-text": "^0.0.20",
-    "shallowequal": "1.0.2",
-    "uuid": "3.2.1"
+  "gitHead": "a7198d596bf22ab36be3dcc08f739ce2dafc50fa",
+  "homepage": "https://github.com/FaridSafi/react-native-gifted-chat#readme",
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example",
+      "<rootDir>/example-expo",
+      "<rootDir>/example-slack-message"
+    ]
   },
+  "keywords": [
+    "android",
+    "ios",
+    "react-native",
+    "react",
+    "react-component",
+    "messenger",
+    "message",
+    "chat"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-gifted-chat",
+  "optionalDependencies": {},
   "peerDependencies": {
     "prop-types": "*",
     "react": "*",
     "react-native": "*"
-  }
+  },
+  "readme": "<p align=\"center\" >\n    <img alt=\"react-native-gifted-chat\" src=\"https://thumbs.gfycat.com/AbsoluteSadDobermanpinscher-size_restricted.gif\" width=\"260\" height=\"510\" />\n\n</p>\n\n<h3 align=\"center\">\n  💬 Gifted Chat\n</h3>\n<p align=\"center\">\n  The most complete chat UI for React Native <br/>\n  <small>formerly known as Gifted Messenger</small>\n</p>\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/react-native-gifted-chat\">\n  <img alt=\"npm dowloads\" src=\"https://img.shields.io/npm/dm/react-native-gifted-chat.svg\"/></a>\n  <a href=\"https://www.npmjs.com/package/react-native-gifted-chat\"><img alt=\"npm version\" src=\"https://badge.fury.io/js/react-native-gifted-chat.svg\"/></a>\n  <a href=\"https://greenkeeper.io/\"><img src=\"https://badges.greenkeeper.io/FaridSafi/react-native-gifted-chat.svg\" alt=\"build\"></a>\n  <a href=\"https://reactnative.gallery\"><img src=\"https://img.shields.io/badge/reactnative.gallery-%E2%99%A5-red.svg\" alt=\"reactnative.gallery\"></a>\n\n</p>\n<p align=\"center\">\n  <a href=\"https://circleci.com/gh/FaridSafi/react-native-gifted-chat\"><img src=\"https://circleci.com/gh/FaridSafi/react-native-gifted-chat.svg?style=shield\" alt=\"build\"></a>\n  <a href=\"https://travis-ci.org/FaridSafi/react-native-gifted-chat\"><img src=\"https://api.travis-ci.org/FaridSafi/react-native-gifted-chat.svg\" alt=\"deployed\"></a>\n  <a href=\"https://codecov.io/gh/FaridSafi/react-native-gifted-chat\"><img src=\"https://codecov.io/gh/FaridSafi/react-native-gifted-chat/coverage.svg\"></a>\n  <a title='License' href=\"https://github.com/FaridSafi/react-native-gifted-chat/blob/master/LICENSE\" height=\"18\">\n    <img src='https://img.shields.io/badge/license-MIT-blue.svg' />\n  </a>\n</p>\n\n<p align=\"center\">\n  <img src=\"https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=exp://expo.io/@xcarpentier/gifted-chat\">\n  <br>\n  <a href=\"https://snack.expo.io/@xcarpentier/gifted-chat\" target=\"_blank\"><i>demo</i></a>\n</p>\n\n## Features\n\n* Fully customizable components\n* Composer actions (to attach photos, etc.)\n* Load earlier messages\n* Copy messages to clipboard\n* Touchable links using [react-native-parsed-text](https://github.com/taskrabbit/react-native-parsed-text)\n* Avatar as user's initials\n* Localized dates\n* Multiline TextInput\n* InputToolbar avoiding keyboard\n* Redux support\n* System message\n\n## Dependency\n\n* Use version `0.2.x` for RN `>= 0.44.0`\n* Use version `0.1.x` for RN `>= 0.40.0`\n* Use version `0.0.10` for RN `< 0.40.0`\n\n## Installation\n\n* Using [npm](https://www.npmjs.com/#getting-started): `npm install react-native-gifted-chat --save`\n* Using [Yarn](https://yarnpkg.com/): `yarn add react-native-gifted-chat`\n\n## Example\n\n```jsx\nimport { GiftedChat } from 'react-native-gifted-chat'\n\nclass Example extends React.Component {\n  state = {\n    messages: [],\n  }\n\n  componentWillMount() {\n    this.setState({\n      messages: [\n        {\n          _id: 1,\n          text: 'Hello developer',\n          createdAt: new Date(),\n          user: {\n            _id: 2,\n            name: 'React Native',\n            avatar: 'https://facebook.github.io/react/img/logo_og.png',\n          },\n        },\n      ],\n    })\n  }\n\n  onSend(messages = []) {\n    this.setState(previousState => ({\n      messages: GiftedChat.append(previousState.messages, messages),\n    }))\n  }\n\n  render() {\n    return (\n      <GiftedChat\n        messages={this.state.messages}\n        onSend={messages => this.onSend(messages)}\n        user={{\n          _id: 1,\n        }}\n      />\n    )\n  }\n}\n```\n\n## Advanced example\n\nSee [`example/App.js`](example/App.js) for a working demo!\n\n## \"Slack\" example\n\nSee the files in [`example-slack-message`](example-slack-message) for an example of how to override the default UI to make something that looks more like Slack -- with usernames displayed and all messages on the left.\n\n## Message object\n\ne.g. Chat Message\n\n```js\n{\n  _id: 1,\n  text: 'My message',\n  createdAt: new Date(Date.UTC(2016, 5, 11, 17, 20, 0)),\n  user: {\n    _id: 2,\n    name: 'React Native',\n    avatar: 'https://facebook.github.io/react/img/logo_og.png',\n  },\n  image: 'https://facebook.github.io/react/img/logo_og.png',\n  // Any additional custom parameters are passed through\n}\n```\n\ne.g. System Message\n\n```js\n{\n  _id: 1,\n  text: 'This is a system message',\n  createdAt: new Date(Date.UTC(2016, 5, 11, 17, 20, 0)),\n  system: true,\n  // Any additional custom parameters are passed through\n}\n```\n\n## Props\n\n* **`messages`** _(Array)_ - Messages to display\n* **`text`** _(String)_ - Input text; default is `undefined`, but if specified, it will override GiftedChat's internal state (e.g. for redux; [see notes below](#notes-for-redux))\n* **`placeholder`** _(String)_ - Placeholder when `text` is empty; default is `'Type a message...'`\n* **`messageIdGenerator`** _(Function)_ - Generate an id for new messages. Defaults to UUID v4, generated by [uuid](https://github.com/kelektiv/node-uuid)\n* **`user`** _(Object)_ - User sending the messages: `{ _id, name, avatar }`\n* **`onSend`** _(Function)_ - Callback when sending a message\n* **`alwaysShowSend`** _(Bool)_ - Always show send button in input text composer; default `false`, show only when text input is not empty\n* **`locale`** _(String)_ - Locale to localize the dates\n* **`timeFormat`** _(String)_ - Format to use for rendering times; default is `'LT'`\n* **`dateFormat`** _(String)_ - Format to use for rendering dates; default is `'ll'`\n* **`isAnimated`** _(Bool)_ - Animates the view when the keyboard appears\n* **`loadEarlier`** _(Bool)_ - Enables the \"Load earlier messages\" button\n* **`onLoadEarlier`** _(Function)_ - Callback when loading earlier messages\n* **`isLoadingEarlier`** _(Bool)_ - Display an `ActivityIndicator` when loading earlier messages\n* **`renderLoading`** _(Function)_ - Render a loading view when initializing\n* **`renderLoadEarlier`** _(Function)_ - Custom \"Load earlier messages\" button\n* **`renderAvatar`** _(Function)_ - Custom message avatar; set to `null` to not render any avatar for the message\n* **`showUserAvatar`** _(Bool)_ - Whether to render an avatar for the current user; default is `false`, only show avatars for other users\n* **`showAvatarForEveryMessage`** _(Bool)_ - When false, avatars will only be displayed when a consecutive message is from the same user on the same day; default is `false`\n* **`onPressAvatar`** _(Function(`user`))_ - Callback when a message avatar is tapped\n* **`renderAvatarOnTop`** _(Bool)_ - Render the message avatar at the top of consecutive messages, rather than the bottom; default is `false`\n* **`renderBubble`** _(Function)_ - Custom message bubble\n* **`renderSystemMessage`** _(Function)_ - Custom system message\n* **`onLongPress`** _(Function(`context`, `message`))_ - Callback when a message bubble is long-pressed; default is to show an ActionSheet with \"Copy Text\" (see [example using `showActionSheetWithOptions()`](https://github.com/FaridSafi/react-native-gifted-chat/blob/master@%7B2017-09-25%7D/src/Bubble.js#L96-L119))\n* **`inverted`** _(Bool)_ - Reverses display order of `messages`; default is `true`\n* **`renderMessage`** _(Function)_ - Custom message container\n* **`renderMessageText`** _(Function)_ - Custom message text\n* **`renderMessageImage`** _(Function)_ - Custom message image\n* **`imageProps`** _(Object)_ - Extra props to be passed to the [`<Image>`](https://facebook.github.io/react-native/docs/image.html) component created by the default `renderMessageImage`\n* **`lightboxProps`** _(Object)_ - Extra props to be passed to the `MessageImage`'s [Lightbox](https://github.com/oblador/react-native-lightbox)\n* **`renderCustomView`** _(Function)_ - Custom view inside the bubble\n* **`renderDay`** _(Function)_ - Custom day above a message\n* **`renderTime`** _(Function)_ - Custom time inside a message\n* **`renderFooter`** _(Function)_ - Custom footer component on the ListView, e.g. `'User is typing...'`; see [example/App.js](example/App.js) for an example\n* **`renderChatFooter`** _(Function)_ - Custom component to render below the MessageContainer (separate from the ListView)\n* **`renderInputToolbar`** _(Function)_ - Custom message composer container\n* **`renderComposer`** _(Function)_ - Custom text input message composer\n* **`renderActions`** _(Function)_ - Custom action button on the left of the message composer\n* **`renderSend`** _(Function)_ - Custom send button; you can pass children to the original `Send` component quite easily, for example to use a custom icon ([example](https://github.com/FaridSafi/react-native-gifted-chat/pull/487))\n* **`renderAccessory`** _(Function)_ - Custom second line of actions below the message composer\n* **`onPressActionButton`** _(Function)_ - Callback when the Action button is pressed (if set, the default `actionSheet` will not be used)\n* **`bottomOffset`** _(Integer)_ - Distance of the chat from the bottom of the screen (e.g. useful if you display a tab bar)\n* **`minInputToolbarHeight`** _(Integer)_ - Minimum height of the input toolbar; default is `44`\n* **`listViewProps`** _(Object)_ - Extra props to be passed to the messages [`<ListView>`](https://facebook.github.io/react-native/docs/listview.html); some props can't be overridden, see the code in `MessageContainer.render()` for details\n* **`textInputProps`** _(Object)_ - Extra props to be passed to the [`<TextInput>`](https://facebook.github.io/react-native/docs/textinput.html)\n* **`keyboardShouldPersistTaps`** _(Enum)_ - Determines whether the keyboard should stay visible after a tap; see [`<ScrollView>`](https://facebook.github.io/react-native/docs/scrollview.html) docs\n* **`onInputTextChanged`** _(Function)_ - Callback when the input text changes\n* **`maxInputLength`** _(Integer)_ - Max message composer TextInput length\n* **`parsePatterns`** _(Function)_ - Custom parse patterns for [react-native-parsed-text](https://github.com/taskrabbit/react-native-parsed-text) used to linkify message content (like URLs and phone numbers), e.g.:\n\n  ```js\n  <GiftedChat\n    parsePatterns={(linkStyle) => [\n      { type: 'phone', style: linkStyle, onPress: this.onPressPhoneNumber },\n      { pattern: /#(\\w+)/, style: { ...linkStyle, styles.hashtag }, onPress: this.onPressHashtag },\n    ]}\n  />\n  ```\n\n## Imperative methods\n\n* `focusTextInput()` - Open the keyboard and focus the text input box\n\n## Notes for [Redux](https://github.com/reactjs/redux)\n\nThe `messages` prop should work out-of-the-box with Redux. In most cases this is all you need.\n\nIf you decide to specify a `text` prop, GiftedChat will no longer manage its own internal `text` state and will defer entirely to your prop.\nThis is great for using a tool like Redux, but there's one extra step you'll need to take:\nsimply implement `onInputTextChanged` to receive typing events and reset events (e.g. to clear the text `onSend`):\n\n```js\n<GiftedChat\n  text={customText}\n  onInputTextChanged={text => this.setCustomText(text)}\n  /* ... */\n/>\n```\n\n## Notes for Android\n\nIf you are using Create React Native App / Expo, no Android specific installation steps are required -- you can skip this section. Otherwise we recommend modifying your project configuration as follows.\n\n* Make sure you have `android:windowSoftInputMode=\"adjustResize\"` in your `AndroidManifest.xml`:\n\n  ```xml\n  <activity\n    android:name=\".MainActivity\"\n    android:label=\"@string/app_name\"\n    android:windowSoftInputMode=\"adjustResize\"\n    android:configChanges=\"keyboard|keyboardHidden|orientation|screenSize\">\n  ```\n* For **Expo**, there are almost 2 solutions to fix it:\n  * adding KeyboardAvoidingView after GiftedChat\n  * adding an opaque background status bar on app.json https://docs.expo.io/versions/latest/guides/configuration.html#androidstatusbar\n\n* If you plan to use `GiftedChat` inside a `Modal`, see [#200](https://github.com/FaridSafi/react-native-gifted-chat/issues/200).\n## Notes for local development\n\nYou can use [`wml`](https://github.com/wix/wml) to keep the example app in sync\nwith any changes you make to the library during development. Steps:\n\n1. Install it: `npm install -g wml`\n2. Configure it: `wml add . example/node_modules/react-native-gifted-chat` from the root directory\n3. `cd example`\n4. `npm start`\n5. `wml start` in another terminal window (doesn't matter where)\n\nNote that it's important for `wml start` to come **after** `npm start`, or you'll get `Can't find entry file index.js` errors.\nIf you have any issues, you can clear your watches using `watchman watch-del-all` and try again.\n\n## Questions\n\n* [How can I set Bubble color for each user?](https://github.com/FaridSafi/react-native-gifted-chat/issues/672)\n* [How can I pass style props to InputToolbar design and customize it's color and other styles properties?](https://github.com/FaridSafi/react-native-gifted-chat/issues/662)\n* [How can I change the color of the message box?](https://github.com/FaridSafi/react-native-gifted-chat/issues/640)\n* [Is there a way to manually dismiss the keyboard?](https://github.com/FaridSafi/react-native-gifted-chat/issues/647)\n* [I want to implement a popover that pops right after clicking on a specific avatar,\n  what is the best implementation in this case and how?](https://github.com/FaridSafi/react-native-gifted-chat/issues/660)\n* [Why Textinput is hidden on Android?](https://github.com/FaridSafi/react-native-gifted-chat/issues/680#issuecomment-359699364)\n* [How to use renderLoading?](https://github.com/FaridSafi/react-native-gifted-chat/issues/298)\n* [Can I use MySql to save the message?](https://github.com/FaridSafi/react-native-gifted-chat/issues/738)\n\n## License\n\n* [MIT](LICENSE)\n\n## Author\n\nFeel free to ask me questions on Twitter [@FaridSafi](https://www.twitter.com/FaridSafi)!\n\n## Contributors\n\n* Kevin Cooper [cooperka](https://github.com/cooperka)\n* Kfir Golan [kfiroo](https://github.com/kfiroo)\n* Bruno Cascio [brunocascio](https://github.com/brunocascio)\n* Xavier Carpentier [xcarpentier](https://github.com/xcarpentier)\n* [more](https://github.com/FaridSafi/react-native-gifted-chat/graphs/contributors)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaridSafi/react-native-gifted-chat.git"
+  },
+  "scripts": {
+    "appr": "cd example-expo && ./setPRVersion.js && yarn && yarn appr",
+    "deploy": "cd example-expo && yarn install && exp login --username $EXP_USERNAME --password $EXP_PASSWORD && exp publish --non-interactive",
+    "lint": "eslint . --ext .js,.jsx",
+    "precommit": "yarn lint",
+    "test": "jest --no-watchman",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "types": "index.d.ts",
+  "version": "0.4.3"
 }

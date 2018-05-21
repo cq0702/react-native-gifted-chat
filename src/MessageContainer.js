@@ -9,13 +9,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { ListView, View, StyleSheet } from 'react-native';
+import { ListView, View, StyleSheet,Dimensions } from 'react-native';
 
 import shallowequal from 'shallowequal';
 import InvertibleScrollView from 'react-native-invertible-scroll-view';
 import md5 from 'md5';
 import LoadEarlier from './LoadEarlier';
 import Message from './Message';
+const {width,height} = Dimensions.get('window');
 
 export default class MessageContainer extends React.Component {
 
@@ -36,6 +37,7 @@ export default class MessageContainer extends React.Component {
     const messagesData = this.prepareMessages(props.messages);
     this.state = {
       dataSource: dataSource.cloneWithRows(messagesData.blob, messagesData.keys),
+        contentHeight: null
     };
   }
 
@@ -50,13 +52,16 @@ export default class MessageContainer extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (!shallowequal(this.props, nextProps)) {
-      return true;
+    if (!shallowequal(this.props.messages, nextProps.messages)) {
+        this.setState({
+            contentHeight: null
+        })
+        return true;
     }
     if (!shallowequal(this.state, nextState)) {
-      return true;
+        return true;
     }
-    return false;
+      return false;
   }
 
   prepareMessages(messages) {
@@ -95,7 +100,7 @@ export default class MessageContainer extends React.Component {
     return null;
   }
 
-  renderFooter() {
+  renderFooter=()=>{
     if (this.props.renderFooter) {
       const footerProps = {
         ...this.props,
@@ -137,7 +142,7 @@ export default class MessageContainer extends React.Component {
       <InvertibleScrollView
         {...props}
         {...invertibleScrollViewProps}
-        ref={(component) => (this._invertibleScrollViewRef = component)}
+          ref={(component) => (this._invertibleScrollViewRef = component)}
       />
     );
   }
@@ -147,24 +152,47 @@ export default class MessageContainer extends React.Component {
       ? {}
       : styles.notInvertedContentContainerStyle;
 
-    return (
+    let containerStyle
+    if (this.state.contentHeight){
+        containerStyle={justifyContent: 'flex-end',height: this.state.contentHeight}
+    }else {
+        containerStyle={justifyContent: 'flex-end'}
+    }
+      return (
       <View style={styles.container}>
         <ListView
           enableEmptySections
           automaticallyAdjustContentInsets={false}
-          initialListSize={20}
-          pageSize={20}
+          initialListSize={this.props.messages.length}
+          pageSize={10}
           {...this.props.listViewProps}
           dataSource={this.state.dataSource}
-          contentContainerStyle={contentContainerStyle}
+          contentContainerStyle={containerStyle}
           renderRow={this.renderRow}
+          renderHeader={this.renderLoadEarlier}
           renderFooter={this.renderFooter}
           renderScrollComponent={this.renderScrollComponent}
+          onContentSizeChange={this._onContentSizeChange}
         />
       </View>
     );
   }
 
+    _onContentSizeChange=(contentWidth, contentHeight)=>{
+        if (contentHeight>height-64-95){
+            if (contentHeight!=this.state.contentHeight){
+                this.setState({
+                    contentHeight: contentHeight
+                })
+            }
+        }else {
+          if (!this.state.contentHeight||this.state.contentHeight!=height-64-95){
+              this.setState({
+                  contentHeight: height-64-95
+              })
+          }
+        }
+    }
 }
 
 const styles = StyleSheet.create({
