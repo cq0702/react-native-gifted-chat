@@ -118,6 +118,10 @@ class GiftedChat extends React.Component {
     const { messages, text } = nextProps;
     this.setMessages(messages || []);
     this.setTextFromProp(text);
+    const newMessagesContainerHeight = this.getMessagesContainerHeightWithKeyboard();
+    this.setState({
+        messagesContainerHeight: this.prepareMessagesContainerHeight(newMessagesContainerHeight),
+    })
   }
 
   initLocale() {

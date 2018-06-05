@@ -129,9 +129,10 @@ const styles = {
   },
     nameText: {
         color: '#676767',
-        fontSize: 10,
+        fontSize: 9,
         textAlign: 'center',
-        marginTop: 5
+        marginTop: 5,
+        maxWidth: 40
     }
 };
 

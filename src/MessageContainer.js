@@ -42,7 +42,7 @@ export default class MessageContainer extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.messages === nextProps.messages) {
+      if (this.props.messages === nextProps.messages) {
       return;
     }
     const messagesData = this.prepareMessages(nextProps.messages);
@@ -52,15 +52,33 @@ export default class MessageContainer extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (!shallowequal(this.props.messages, nextProps.messages)) {
-        this.setState({
+
+      if (!shallowequal(this.props.messages, nextProps.messages)) {
+
+          this.setState({
             contentHeight: null
-        })
-        return true;
+          })
+          return true;
     }
     if (!shallowequal(this.state, nextState)) {
-        return true;
+        if (nextState.contentHeight&&this.state.contentHeight&&nextState.contentHeight>=this.state.contentHeight){
+            this.setState({
+                contentHeight: nextState.contentHeight
+            })
+                return true;
+        }else if (nextState.contentHeight&&this.state.contentHeight&&nextState.contentHeight<this.state.contentHeight){
+
+            this.setState({
+                contentHeight: this.state.contentHeight
+            })
+                return true;
+        }else {
+
+            return true;
+        }
+
     }
+
       return false;
   }
 
